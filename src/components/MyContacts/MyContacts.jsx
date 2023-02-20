@@ -30,8 +30,9 @@ class MyContacts extends Component {
     addContact = ({ name, number }) => {
         if (this.isDublicate(name)) {
             alert(`${name} is already in contacts.`);
-
             this.reset();
+            
+            return
         }
 
         this.setState(prevState => {
